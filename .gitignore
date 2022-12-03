@@ -1,5 +1,3 @@
 dlv
 node_modules
-*.asp
-demo-template.json
-visualizer.js
+examples_files
