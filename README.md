@@ -4,10 +4,6 @@
     cd AgileScriptIntegration
     npm run build
 
-## Recursive pulling
-    
-    git pull && git submodule foreach git pull origin master
-
 ## Usage
     node visualizer.js -d path_to_dlv -i path_to_asp_file -t path_to_template -o path_to_output_directory
     
