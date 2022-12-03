@@ -1,6 +1,6 @@
 
 ## Cloning and installing all the required modules
-    git clone --recurse-submodules https://github.com/Simone-Aiello/AgileScriptIntegration.git
+    git clone --recurse-submodules https://github.com/Agile-visualizer-Team/AgileScriptIntegration.git
     cd AgileScriptIntegration
     npm run build
 
