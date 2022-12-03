@@ -4,12 +4,14 @@
   "description": "",
   "main": "visualizer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install && npm-recursive-install"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "child_process": "^1.0.2",
+    "recursive-install": "^1.4.0",
     "yargs": "^17.6.2"
   },
   "devDependencies": {
