@@ -38,16 +38,14 @@ var { argv } = require("yargs")
 let visualizer_object = {
     'graph': `node ./asd-graph-renderer/build/script.js fromstr --template ${argv.template_file} --output ./${argv.output}`,
     'tree': `node ./asd-graph-renderer/build/script.js fromstr --template ${argv.template_file} --output ./${argv.output}`,
-    'table': "",
-    'matrix': "",
+    'table': `node agile_visualizer_matrix_visualizaton/src/table_visualization.js fromstr --template ./${argv.template_file}`,
+    'matrix': `node agile_visualizer_matrix_visualizaton/src/matrix_visualization.js fromstr --template ./${argv.template_file}`,
 }
 
 let rawdata = fs.readFileSync(`${argv.template_file}`);
 let tmp = JSON.parse(rawdata);
-
 let dlv_execution = `node ./NodeJs-DLV-Wrapper/dlv_wrapper.js -i ${argv.asp_file} -d ${argv.dlv_path} -n ${argv.as_number}`
 let dlv_result = "" + execSync(dlv_execution)
-
 let res = execSync(`${visualizer_object[tmp['template']]}`, {input: `${dlv_result}\n\r`})
 
 console.log("" + res)
