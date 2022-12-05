@@ -36,10 +36,10 @@ var { argv } = require("yargs")
 .describe("help", "Show help.")
 
 let visualizer_object = {
-    'graph': `node ./asd-graph-renderer/build/script.js fromstr --template ${argv.template_file} --output ./${argv.output}`,
-    'tree': `node ./asd-graph-renderer/build/script.js fromstr --template ${argv.template_file} --output ./${argv.output}`,
-    'table': `node agile_visualizer_matrix_visualizaton/src/table_visualization.js fromstr --template ./${argv.template_file}`,
-    'matrix': `node agile_visualizer_matrix_visualizaton/src/matrix_visualization.js fromstr --template ./${argv.template_file}`,
+    'graph': `node ./asd-graph-renderer/build/script.js fromstr --template ${argv.template_file} --output ${argv.output}`,
+    'tree': `node ./asd-graph-renderer/build/script.js fromstr --template ${argv.template_file} --output ${argv.output}`,
+    'table': `node agile_visualizer_matrix_visualizaton/src/table_visualization.js fromstr --template ${argv.template_file}`,
+    'matrix': `node agile_visualizer_matrix_visualizaton/src/matrix_visualization.js fromstr --template ${argv.template_file}`,
 }
 
 let rawdata = fs.readFileSync(`${argv.template_file}`);
